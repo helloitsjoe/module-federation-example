@@ -6,7 +6,7 @@
     "test": "jest",
     "build": "webpack --mode production",
     "watch": "webpack --watch",
-    "serve": "serve dist -p 8082",
+    "serve": "serve dist -p $APP2_PORT",
     "start": "webpack serve"
   },
   "repository": {
