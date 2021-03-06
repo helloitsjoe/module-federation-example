@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { makeWebpackConfig } = require('webpack-simple');
 
+const { APP1_PORT, APP2_PORT } = process.env;
+
 const config = makeWebpackConfig();
 
 module.exports = {
@@ -12,8 +14,8 @@ module.exports = {
     compress: true,
     hot: true,
     open: true,
-    port: 8082,
-    host: '0.0.0.0',
+    port: APP2_PORT,
+    // host: '0.0.0.0',
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -23,7 +25,7 @@ module.exports = {
         // - Key defined here is used in module import paths
         // - root `appName@` matches `library.name` in app1 webpack config
         // - remoteEntry matches `filename` in app1 webpack config
-        appFoo: 'appBar@//0.0.0.0:8081/remoteEntry.js',
+        appFoo: `appBar@//0.0.0.0:${APP1_PORT}/remoteEntry.js`,
       },
       // Shared dependencies need to be lazy loaded, either with `bundle-loader` (lazy: true)
       // or by dynamically importing bootstrap.js in index. See here for more info:
