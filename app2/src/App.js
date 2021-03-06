@@ -1,15 +1,21 @@
 import React from 'react';
 
 // root import path defined in webpack config 'remotes' keys
-const LazyButton = React.lazy(() => import('appFoo/Button'));
+const LazyHeader = React.lazy(() => import('appFoo/Header'));
+
+const HeaderFallback = () => (
+  <div
+    style={{ height: '80px', width: '100%', backgroundColor: 'lightgray' }}
+  />
+);
 
 export const App = () => {
   return (
     <div>
-      <h1>Hello from App 2!</h1>
-      <React.Suspense fallback="Loading button...">
-        <LazyButton />
+      <React.Suspense fallback={<HeaderFallback />}>
+        <LazyHeader />
       </React.Suspense>
+      <h1>Hello from App 2!</h1>
     </div>
   );
 };

@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // Not sure if `name` is used by other apps (`library.name` is used)
+      // Not sure where `name` is used, consuming apps use `library.name`.
       name: 'app2',
       remotes: {
         // - Key defined here is used in module import paths
