@@ -7,10 +7,10 @@
     ]
   },
   "scripts": {
-    "start": "lerna run --parallel start",
     "build": "lerna run build",
-    "serve": "lerna run serve",
-    "clean": "lerna run clean"
+    "start": "APP1_PORT=8081 APP2_PORT=8082 lerna run --parallel start",
+    "serve": "APP1_PORT=8081 APP2_PORT=8082 lerna run --parallel serve",
+    "clean": "lerna run --parallel clean"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
