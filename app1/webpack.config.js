@@ -7,8 +7,6 @@ const { APP1_PORT } = process.env;
 
 const config = makeWebpackConfig();
 
-console.log(config);
-
 module.exports = {
   ...config,
   devServer: {
@@ -21,9 +19,9 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // Not sure if `name` is used by other apps (`library.name` is used)
+      // Not sure where `name` is used, consuming apps use `library.name`.
       name: 'app1',
-      // filename is used as entrypoint in
+      // filename is used as entrypoint in other apps `remotes`
       filename: 'remoteEntry.js',
       // - `library.name` is used as root in other apps' `remotes` values
       // - Haven't found documentation for library options or types, but they seem
@@ -31,7 +29,7 @@ module.exports = {
       // lazy modules on the window
       library: { type: 'var', name: 'appBar' },
       exposes: {
-        './Button': './src/Button',
+        './Header': './src/Header',
       },
       // Shared dependencies need to be lazy loaded, either with `bundle-loader` (lazy: true)
       // or by dynamically importing bootstrap.js in index. See here for more info:
