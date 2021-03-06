@@ -13,7 +13,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     hot: true,
-    // open: true,
+    open: true,
     port: 8081,
     host: '0.0.0.0',
   },
@@ -24,6 +24,7 @@ module.exports = {
       // filename is used as entrypoint in
       filename: 'remoteEntry.js',
       // `library.name` is used as root in other apps' `remotes` values
+      // Haven't found documentation for library options or types
       library: { type: 'var', name: 'appBar' },
       exposes: {
         './Button': './src/Button',
