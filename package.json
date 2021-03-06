@@ -10,7 +10,8 @@
     "start": "lerna run --parallel start",
     "build": "lerna run build",
     "serve": "lerna run serve",
-    "clean": "lerna run clean"
+    "clean": "lerna run clean",
+    "test": "lerna run --parallel test"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
