@@ -16,6 +16,7 @@ export const App = () => {
         <LazyHeader />
       </React.Suspense>
       <h1>Hello from App 2!</h1>
+      <a href="/app1">Go to App 1</a>
     </div>
   );
 };
