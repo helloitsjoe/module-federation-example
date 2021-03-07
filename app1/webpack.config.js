@@ -10,12 +10,16 @@ const config = makeWebpackConfig();
 module.exports = {
   ...config,
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, '..', 'dist', 'app1'),
     compress: true,
     hot: true,
     open: true,
     port: APP1_PORT,
     // host: '0.0.0.0',
+  },
+  output: {
+    chunkFilename: '[name].[contenthash:8].js',
+    path: path.join(__dirname, '..', 'dist', 'app1'),
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -25,8 +29,8 @@ module.exports = {
       filename: 'remoteEntry.js',
       // - `library.name` is used as root in other apps' `remotes` values
       // - Haven't found documentation for library options or types, but they seem
-      // pretty self-explanatory. For example, type: 'window' puts the exposed
-      // lazy modules on the window
+      // pretty self-explanatory. For example, type: 'window' puts the exposed lazy
+      // modules on the window... actually it looks like they're on the window anyway :think:
       library: { type: 'var', name: 'appBar' },
       exposes: {
         './Header': './src/Header',
