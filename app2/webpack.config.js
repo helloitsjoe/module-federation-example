@@ -10,7 +10,7 @@ const config = makeWebpackConfig();
 module.exports = {
   ...config,
   devServer: {
-    contentBase: path.join(__dirname, '..', 'dist', 'app2'),
+    contentBase: path.join(__dirname, '..', 'docs', 'app2'),
     compress: true,
     hot: true,
     open: true,
@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     chunkFilename: '[name].[contenthash:8].js',
-    path: path.join(__dirname, '..', 'dist', 'app2'),
+    path: path.join(__dirname, '..', 'docs', 'app2'),
   },
   plugins: [
     new ModuleFederationPlugin({

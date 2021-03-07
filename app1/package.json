@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf ../dist/app1",
+    "clean": "rm -rf ../docs/app1",
     "build": "yarn clean && webpack --mode production",
     "watch": "webpack --watch",
-    "serve": "serve dist -p $APP1_PORT",
+    "serve": "serve ../docs/app1 -p $APP1_PORT",
     "start": "webpack serve"
   },
   "repository": {
