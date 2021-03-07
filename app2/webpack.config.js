@@ -10,7 +10,7 @@ const config = makeWebpackConfig();
 module.exports = (env, argv) => {
   const remoteHost =
     argv.mode === 'production'
-      ? '/module-federation-example/app1'
+      ? 'helloitsjoe.github.io/module-federation-example/app1'
       : `0.0.0.0:${APP1_PORT}`;
 
   return {
