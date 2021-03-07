@@ -9,6 +9,11 @@ const HeaderFallback = () => (
   />
 );
 
+const url =
+  process.env.NODE_ENV === 'production'
+    ? '/module-federation-example/app1'
+    : 'http://localhost:8081';
+
 export const App = () => {
   return (
     <div>
@@ -16,7 +21,7 @@ export const App = () => {
         <LazyHeader />
       </React.Suspense>
       <h1>Hello from App 2!</h1>
-      <a href="/module-federation-example/app1">Go to App 1</a>
+      <a href={url}>Go to App 1</a>
     </div>
   );
 };
