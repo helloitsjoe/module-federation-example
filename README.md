@@ -1,7 +1,7 @@
 # Webpack Module Federation Example
 
-[App 1](https://helloitsjoe.github.io/module-federation-example/app1)
-[App 2](https://helloitsjoe.github.io/module-federation-example/app2)
+- [App 1](https://helloitsjoe.github.io/module-federation-example/app1)
+- [App 2](https://helloitsjoe.github.io/module-federation-example/app2)
 
 A simple example using module federation to include the same header on two
 different apps.
@@ -14,5 +14,11 @@ since I can't find API documentation anywhere.
 ## Development
 
 This project uses `lerna`. From the project root, run `yarn start` to start dev
-servers serving apps 1 (port 8081) and 2 (port 8082). The apps are separate, but
-app 1 exposes its `Header` component and app 2 consumes it.
+servers serving two apps:
+
+- App 1 (port 8081)
+- App 2 (port 8082)
+
+The apps are separate, but app 1 exposes its `Header` component and app 2
+consumes it. If app 1 makes an update to the header, it's updated in both
+without app 2 needing to upgrade.
