@@ -1,5 +1,8 @@
 # Webpack Module Federation Example
 
+[App 1](https://helloitsjoe.github.io/module-federation-example/app1)
+[App 2](https://helloitsjoe.github.io/module-federation-example/app2)
+
 A simple example using module federation to include the same header on two
 different apps.
 
