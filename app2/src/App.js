@@ -24,6 +24,10 @@ export const App = () => {
         <Header />
       </React.Suspense>
       <h1>Hello from App 2!</h1>
+      <p>
+        This is an example of module federation using Webpack 5. The header is
+        shared between this app and app 1.
+      </p>
       <a href={url}>Go to App 1</a>
     </div>
   );
