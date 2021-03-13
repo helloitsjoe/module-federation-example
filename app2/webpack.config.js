@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
   return {
     ...config,
     devServer: {
-      contentBase: path.join(__dirname, '..', 'docs', 'app2'),
+      contentBase: path.join(__dirname, '..', 'dist', 'app2'),
       compress: true,
       hot: true,
       open: true,
@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
     },
     output: {
       chunkFilename: '[name].[contenthash:8].js',
-      path: path.join(__dirname, '..', 'docs', 'app2'),
+      path: path.join(__dirname, '..', 'dist', 'app2'),
       filename: 'main.[contenthash:8].js',
     },
     plugins: [
