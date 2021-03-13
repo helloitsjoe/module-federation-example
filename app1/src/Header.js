@@ -8,7 +8,6 @@ export const Button = () => {
   return (
     <div
       style={{
-        height: '80px',
         width: '100%',
         backgroundColor: 'cornflowerblue',
         padding: '2em',

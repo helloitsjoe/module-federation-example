@@ -18,9 +18,8 @@ module.exports = {
     // host: '0.0.0.0',
   },
   output: {
-    chunkFilename: '[name].[contenthash:8].js',
     path: path.join(__dirname, '..', 'dist', 'app1'),
-    filename: 'main.[contenthash:8].js',
+    filename: '[name].[contenthash:8].js',
   },
   plugins: [
     new ModuleFederationPlugin({

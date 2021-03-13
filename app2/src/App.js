@@ -20,9 +20,9 @@ const url =
 export const App = () => {
   return (
     <div>
-      {/* <React.Suspense fallback={<HeaderFallback />}> */}
-      <Header />
-      {/* </React.Suspense> */}
+      <React.Suspense fallback={<HeaderFallback />}>
+        <Header />
+      </React.Suspense>
 
       <div style={{ padding: '2em' }}>
         <h1>Hello from App 2!</h1>

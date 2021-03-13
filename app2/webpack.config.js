@@ -24,7 +24,6 @@ module.exports = (env, argv) => {
       // host: '0.0.0.0',
     },
     output: {
-      chunkFilename: '[name].[contenthash:8].js',
       path: path.join(__dirname, '..', 'dist', 'app2'),
       filename: 'main.[contenthash:8].js',
     },
