@@ -21,6 +21,9 @@ module.exports = {
     path: path.join(__dirname, '..', 'dist', 'app1'),
     filename: '[name].[contenthash:8].js',
   },
+  optimization: {
+    chunkIds: 'named',
+  },
   plugins: [
     new ModuleFederationPlugin({
       // Not sure where `name` is used, consuming apps use `library.name`.
