@@ -13,7 +13,7 @@ export const Button = () => {
         backgroundColor: 'cornflowerblue',
       }}
     >
-      <h2>I am a shared header!</h2>
+      <h2>I am a header, shared from App 1!</h2>
       <button onClick={handleClick}>Click me!</button>
     </div>
   );
