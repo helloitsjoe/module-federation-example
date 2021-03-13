@@ -20,15 +20,18 @@ const url =
 export const App = () => {
   return (
     <div>
-      <React.Suspense fallback={<HeaderFallback />}>
-        <Header />
-      </React.Suspense>
-      <h1>Hello from App 2!</h1>
-      <p>
-        This is an example of module federation using Webpack 5. The header is
-        shared from App 1 and consumed by this app.
-      </p>
-      <a href={url}>Go to App 1</a>
+      {/* <React.Suspense fallback={<HeaderFallback />}> */}
+      <Header />
+      {/* </React.Suspense> */}
+
+      <div style={{ padding: '2em' }}>
+        <h1>Hello from App 2!</h1>
+        <p>
+          This is an example of module federation using Webpack 5. The header is
+          shared from App 1 and consumed by this app.
+        </p>
+        <a href={url}>Go to App 1</a>
+      </div>
     </div>
   );
 };
