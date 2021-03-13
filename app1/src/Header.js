@@ -11,6 +11,7 @@ export const Button = () => {
         height: '80px',
         width: '100%',
         backgroundColor: 'cornflowerblue',
+        padding: '2em',
       }}
     >
       <h2>I am a header, shared from App 1!</h2>
