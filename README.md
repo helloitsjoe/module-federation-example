@@ -20,5 +20,5 @@ servers serving two apps:
 - App 2 (port 8082)
 
 The apps are separate, but app 1 exposes its `Header` component and app 2
-consumes it. If app 1 makes an update to the header, it's updated in both
-without app 2 needing to upgrade.
+consumes it. If app 1 makes an update to the header, it's updated in app 2 at
+runtime (on page refresh).

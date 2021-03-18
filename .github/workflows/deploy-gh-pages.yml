@@ -16,8 +16,8 @@ jobs:
       - name: Deploy
         id: deploy
         uses: helloitsjoe/deploy-github-pages@v1
-        with:
+        # with:
           # target_branch: main
           # build_dir: docs
           # target_dir: docs
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
