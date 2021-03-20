@@ -27,14 +27,14 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       // Consuming apps' `remotes` use `name` if `library.name` is not defined.
-      name: 'app1',
+      name: 'hostApp',
       // filename is used as entrypoint in other apps `remotes`
       filename: 'remoteEntry.js',
       // - `library.name` is used as root in other apps' `remotes` values
       // - Haven't found documentation for library options or types, but they seem
       // pretty self-explanatory. For example, type: 'window' puts the exposed lazy
       // modules on the window... actually it looks like they're on the window anyway :think:
-      // library: { type: 'var', name: 'app1Lib' },
+      // library: { type: 'var', name: 'hostLib' },
       exposes: {
         './Header': './src/Header',
       },

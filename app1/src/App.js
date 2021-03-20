@@ -11,12 +11,12 @@ export const App = () => {
     <div>
       <Header />
       <div style={{ padding: '2em' }}>
-        <h1>Hello from App 1!</h1>
+        <h1>Hello from the host app!</h1>
         <p>
           This is an example of module federation using Webpack 5. The header is
-          shared between this app and app 2.
+          hosted on this app's server and consumed by the consuming app.
         </p>
-        <a href={url}>Go to App 2</a>
+        <a href={url}>Go to the consuming app</a>
       </div>
     </div>
   );

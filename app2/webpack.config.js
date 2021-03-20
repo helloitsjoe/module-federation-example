@@ -32,14 +32,14 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'app2',
+        name: 'consumingApp',
         remotes: {
           // - Key defined here is used in module import paths
           // - root `appName@` matches `library.name` in app1 webpack config,
           //   or `name` if `library` is not defined.
           // - remoteEntry matches `filename` in app1 webpack config
-          appFoo: `app1@//${remoteHost}/remoteEntry.js`,
-          // appFoo: `app1Lib@//${remoteHost}/remoteEntry.js`,
+          host: `hostApp@//${remoteHost}/remoteEntry.js`,
+          // host: `hostLib@//${remoteHost}/remoteEntry.js`,
         },
         // Shared dependencies need to be lazy loaded, either with `bundle-loader` (lazy: true)
         // or by dynamically importing bootstrap.js in index. See here for more info:

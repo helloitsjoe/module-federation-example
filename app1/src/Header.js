@@ -1,7 +1,7 @@
 import React from 'react';
 
 const handleClick = () => {
-  alert('Hello all the way from App 1!');
+  alert('Hello all the way from the host!');
 };
 
 export const Button = () => {
@@ -13,7 +13,9 @@ export const Button = () => {
         padding: '2em',
       }}
     >
-      <h2 style={{ display: 'inline' }}>I am a header, shared from App 1!</h2>
+      <h2 style={{ display: 'inline' }}>
+        I am a header, shared from the host app!
+      </h2>
       <button onClick={handleClick}>Click me!</button>
     </div>
   );

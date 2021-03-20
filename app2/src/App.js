@@ -1,10 +1,8 @@
 import React from 'react';
-
-// root import path (appFoo) defined in webpack config 'remotes' keys
-import Header from 'appFoo/Header';
-
-// Can be eager or lazy
-// const Header = React.lazy(() => import('appFoo/Header'));
+// Root import path (hostApp) defined in webpack config 'remotes' keys.
+// Import can be eager or lazy
+const Header = React.lazy(() => import('host/Header'));
+// import Header from 'host/Header';
 
 const HeaderFallback = () => (
   <div
@@ -25,12 +23,12 @@ export const App = () => {
       </React.Suspense>
 
       <div style={{ padding: '2em' }}>
-        <h1>Hello from App 2!</h1>
+        <h1>Hello from the consuming app!</h1>
         <p>
           This is an example of module federation using Webpack 5. The header is
-          shared from App 1 and consumed by this app.
+          shared from the host app and consumed by this app.
         </p>
-        <a href={url}>Go to App 1</a>
+        <a href={url}>Go to the host app</a>
       </div>
     </div>
   );
