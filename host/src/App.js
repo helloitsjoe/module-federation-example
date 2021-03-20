@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header';
 
-const url =
+const consumerUrl =
   process.env.NODE_ENV === 'production'
-    ? '/module-federation-example/app2'
+    ? '/module-federation-example/consumer'
     : 'http://localhost:8082';
 
 export const App = () => {
@@ -16,7 +16,8 @@ export const App = () => {
           This is an example of module federation using Webpack 5. The header is
           hosted on this app's server and consumed by the consuming app.
         </p>
-        <a href={url}>Go to the consuming app</a>
+        <p>Head over there for more information.</p>
+        <a href={consumerUrl}>Go to the consuming app</a>
       </div>
     </div>
   );

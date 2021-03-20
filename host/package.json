@@ -1,13 +1,13 @@
 {
-  "name": "module-federation-example-app2",
+  "name": "module-federation-example-host",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf ../dist/app2",
+    "clean": "rm -rf ../dist/host",
     "build": "yarn clean && webpack --mode production",
     "watch": "webpack --watch",
-    "serve": "serve ../dist/app2 -p $APP2_PORT",
+    "serve": "serve ../dist/host -p $HOST_APP_PORT",
     "start": "webpack serve"
   },
   "repository": {

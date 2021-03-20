@@ -3,22 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { makeWebpackConfig } = require('webpack-simple');
 
-const { APP1_PORT } = process.env;
+const { HOST_APP_PORT } = process.env;
 
 const config = makeWebpackConfig();
 
 module.exports = {
   ...config,
   devServer: {
-    contentBase: path.join(__dirname, '..', 'dist', 'app1'),
+    contentBase: path.join(__dirname, '..', 'dist', 'host'),
     compress: true,
     hot: true,
     open: true,
-    port: APP1_PORT,
+    port: HOST_APP_PORT,
     // host: '0.0.0.0',
   },
   output: {
-    path: path.join(__dirname, '..', 'dist', 'app1'),
+    path: path.join(__dirname, '..', 'dist', 'host'),
     filename: '[name].[contenthash:8].js',
   },
   optimization: {

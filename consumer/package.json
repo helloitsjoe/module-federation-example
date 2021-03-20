@@ -1,13 +1,13 @@
 {
-  "name": "module-federation-example-app1",
+  "name": "module-federation-example-consumer",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf ../dist/app1",
+    "clean": "rm -rf ../dist/consumer",
     "build": "yarn clean && webpack --mode production",
     "watch": "webpack --watch",
-    "serve": "serve ../dist/app1 -p $APP1_PORT",
+    "serve": "serve ../dist/consumer -p $CONSUMING_APP_PORT",
     "start": "webpack serve"
   },
   "repository": {
